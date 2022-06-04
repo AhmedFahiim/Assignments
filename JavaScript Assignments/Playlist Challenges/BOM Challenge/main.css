@@ -1,0 +1,56 @@
+.container {
+  width: 900px;
+  margin: 100px auto;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ececee;
+  padding: 25px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+}
+form input {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+form .text {
+  flex-basis: 70%;
+  background-color: white;
+}
+form .add {
+  flex-basis: 15%;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+}
+.list {
+  background-color: #ececee;
+  padding: 25px;
+  border-radius: 8px;
+}
+.list div {
+  flex-basis: 80%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.list button {
+  width: fit-content;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+}

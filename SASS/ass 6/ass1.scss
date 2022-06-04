@@ -1,0 +1,81 @@
+// assignment 6
+
+// @mixin arrow($direction) {
+//   content: "";
+//   position: absolute;
+//   border: 20px solid transparent;
+//   -webkit-transform: translateX(-50%);
+//   transform: translateX(-50%);
+//   @if $direction == "top" {
+//     border-bottom-color: red;
+//     top: -40px; 
+//     left: 50%;
+//   } @else if $direction == "bottom" {
+//     border-top-color: red;
+//     bottom: -40px;
+//     left: 50%; 
+//   } @else if $direction == "right" {
+//     border-left-color: red;
+//     right: -20px;
+//     top: 50%; 
+//   }@else if $direction == "left" {
+//     border-right-color: red;
+//     left: -20px;
+//     top: 50%; 
+//   }
+// }
+
+// div {
+//   position: relative;
+//   width: 400px;
+//   height: 200px;
+//   margin: 80px auto;
+//   border: 2px solid #ddd;
+//   &::after {
+//     @include arrow("bottom");
+//   }
+// }
+
+//------------------------------------------------------ assignment 7
+
+// $gridColumns:16;
+
+// @for $c from 1 through $gridColumns {
+//   .col-#{$c} {
+//     width: percentage($c / $gridColumns);
+//   }
+// } 
+
+//------------------------------------------------------ assignment 8
+// $names:
+//   "books" 20px red 18,
+//   "games" 30px green 18,
+//   "dvds" 20px blue;
+
+//   @each $name,$padding,$color,$font-size in $names {
+//     .#{$name} {
+//       padding: $padding;
+//       border-bottom: 2px solid $color;
+//       color: #444;
+//       font-size: if($font-size == null, 16 ,$font-size);
+//     }
+//   }
+
+
+//------------------------------------------------------ assignment 9
+
+$num: 2;
+$start: 100;
+
+
+@function double ($width) {
+  @return $width * $num ;
+}
+
+@for $i from 1 through 5 {
+  .box-#{$start} {
+    width: $start;
+    height: double($start);
+  }
+  $start: $start * $num
+}

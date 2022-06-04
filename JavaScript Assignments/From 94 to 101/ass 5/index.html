@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn JavaScript</title>
+  </head>
+  <script>
+    let mylinks = document.links;
+
+    window.onload = function () {
+      for (let i = 0; i < document.links.length; i++) {
+        if (
+          mylinks[i].classList.contains("open") &&
+          mylinks[i].textContent === "Elzero"
+        ) {
+          mylinks[i].click();
+        }
+      }
+    };
+  </script>
+  <body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+    <script src="main.js"></script>
+  </body>
+</html>
